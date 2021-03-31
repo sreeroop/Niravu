@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="bg"></div>
+    <div class="cursor"></div>
+    <div class="sidebar">
+        <div class="toggle-btn">
+                <span class="one"></span>
+                <span class="two"></span>
+        </div>
+        <div class="social-media">
+
+        </div>
+    </div>
+
+    <div class="menu">
+                <div class="data">
+                <ul>
+                    <li><a href="#" data-text="home" >home</a></li>
+                    <li><a id = "at" href="story.html" data-text="our Story">our Story</a></li>
+                    <li><a href="#" data-text="apps" >apps</a></li>
+                    <li><a href="#" data-text="contact">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+    <section id="home">
+    <div id="landing"></div>
+
+        <div class="home-content">
+            <h1>NIRAVU</h1>
+        <P>A NGO for nature</P>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-content">
+          <h1>ABOUT US</h1>
+          <p>It was in November 1, 2006 (Kerala formation day) that the Niravu Residents Association, Vengeri in Kozhikode City corporation decided to actively take to organic farming and ensure that every member household had a backyard vegetable garden for them. Niravu had as many as 101 residents then. When the forum came across a scarcity of good and indigenous vegetable seeds, its members decided to collect vegetable seeds from different parts of the State.
+
+NIRAVU was formed Inspired by the then Kerala Chief Minister V.S. Achyuthanandan’s exhortation on November 1, 2006 (Kerala Day) to social workers to take up at least one task each with dedication. We have constructed a one-kilometre-long new road linking Netaji Road and Janapriya Road, which spared the residents of a long detour in their daily travels. We are collective of hundred and one residents of the area at Calicut district, Kerala-India .</p>
+        </div>
+        <div class="about-img">
+          <img src="./assets/midhori.jpg" alt="">
+        </div>
+        
+    </section>
+    
+    <section>
+      <h1>Gallery</h1>
+    <div class="center slider">
+    <div>
+      <img src="./assets/canoli.png" alt="">
+     
+    </div>
+    <div>
+      <img src="./assets/cleaning.jpg" alt="">
+      
+    </div>
+    <div>
+      <img src="./assets/cleaning2.jpg" alt="">
+      
+    </div>
+    <div>
+      <img src="./assets/cleaning3.jpg" alt="">
+    </div>
+    <div>
+      <img src="./assets/cleaning4.jpg">
+    </div>
+    <div>
+      <img src="./assets/m-SEED.jpg">
+    </div>
+    <div>
+      <img src="./assets/national_energyconsr.jpg">
+    </div>
+    <div>
+      <img src="./assets/midhori.jpg">
+    </div>
+    <div>
+      <img src="./assets/niravu-team.jpg">
+    </div>
+    </div>
+
+    </section>
+  
+
+  
+  
+
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".center").slick({
+        dots: true,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 0
+      });
+    });
+</script>
+
+
+
+<script src="./js/p5.min.js"></script>
+<script src="./js/vanta.trunk.min.js"></script>
+<script>
+VANTA.TRUNK({
+  el: "#landing",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  scale: 2.00,
+  scaleMobile: 1.00,
+  color: 0x30d935,
+  backgroundColor: 0x000000,
+  spacing: 1.00,
+  chaos: 1.50
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+.bg {
+  background: radial-gradient(
+    circle,
+    rgb(44, 44, 44) 40%,
+    rgb(0, 0, 0) 60%
+  );
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+.cursor {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid rgb(255, 255, 255);
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  transition: all 0.3 ease;
+  transition-property: background,
+    transform;
+  transform-origin: 100% 100%;
+}
+.hovered-link {
+  transform: scale(2);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  color: white;
+}
+
+.sidebar {
+  width: 6%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  filter: blur(2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  background-color: transparent;
+}
+.toggle-btn {
+  position: fixed;
+  margin: 0.5em;
+  padding: 1em;
+  width: 40px;
+  height: 12px;
+  left: 0;
+  z-index: 4;
+}
+.toggle-btn:hover > span {
+  background: #30d935;
+}
+span.one {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #fff;
+}
+
+span.two {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #fff;
+  margin-top: 12px;
+}
+
+.menu {
+  z-index: 1;
+  position: fixed;
+  background-color: #101010;
+  height: 100vh;
+  width: 100%;
+  top: -100%;
+  padding: 5%;
+}
+
+.data {
+  padding: 8em 0 0 2em;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: #fff;
+  font-size: 42px;
+  margin: 25px 0;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+a:hover {
+  letter-spacing: 4px;
+  color: #30d935;
+}
+
+a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  font-size: 100px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+a:hover::before {
+  opacity: 0.1;
+}
+
+section {
+  width: 94%;
+  min-height: 100vh;
+  margin-left: 6%;
+  padding: 10px;
+}
+
+section h1 {
+  font-size: 6rem;
+}
+#landing {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-content{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#home h1 {
+  font-size: 10rem;
+  -webkit-text-stroke: 1px #ffffff;
+  font-weight: 500;
+  text-align: center;
+  color: transparent;
+  position: relative;
+}
+#home h1::before {
+  content: "NIRAVU";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-weight: 500;
+  -webkit-text-stroke: 2px #c8ff00;
+}
+#home p {
+  font-size: 1rem;
+  -webkit-text-stroke: 0.1px #ffffff;
+  font-weight: 100;
+  color: transparent;
+}
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.about-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.about-content p {
+  width: 70%;
+}
+.about-img {
+  flex: 1;
+  width: 50vh;
+  height: 40vh;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 50%;
+  height: 40vh;
+  margin: 100px auto;
+}
+.slick-slide {
+  height: 50vh;
+  margin: 0px 20px;
+  overflow: hidden;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(255, 255, 255);
+}
+.slick-slide {
+  transition: all ease-in-out 0.3s;
+  opacity: 0.2;
+}
+
+.slick-active {
+  opacity: 0.5;
+}
+
+.slick-current {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    width: 80%;
+    height: 40vh;
+    margin: 10px auto;
+  }
+  .slick-slide {
+    height: 50vh;
+    margin: 0px 2px;
+    overflow: hidden;
+  }
+}
