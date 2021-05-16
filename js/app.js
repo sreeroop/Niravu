@@ -66,8 +66,10 @@ links.forEach(link => {
 
 arrow.addEventListener('mouseover', () => {
   mouseCursor.classList.add('hovered-link');
-  console.log("jhd")
 });
   arrow.addEventListener('mouseleave', () => {
     mouseCursor.classList.remove('hovered-link');
   });
+
+
+  
